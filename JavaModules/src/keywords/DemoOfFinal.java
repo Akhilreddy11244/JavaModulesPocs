@@ -2,7 +2,7 @@ package keywords;
 import java.util.*;
 class PlacementsRules {
     final String COLLEGE_NAME = "CMR"; 
-
+// Final-keyword
     final void displayRules() { 
         System.out.println("\nPlacements Rules");
         System.out.println("1. Attendance minimum 75%.");
