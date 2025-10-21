@@ -9,13 +9,10 @@ class Person {
         this.name = name;
         this.id = id;
     }
-
-    // Overridden method
     void showRole() {
         System.out.println("I am a person in the college.");
     }
 }
-
 class Student extends Person {
     String department;
 
@@ -29,8 +26,6 @@ class Student extends Person {
         System.out.println("I am a student from the " + department + " department.");
     }
 }
-
-
 class TeachingStaff extends Person {
     String subject;
 
@@ -38,33 +33,26 @@ class TeachingStaff extends Person {
         super(name, id);
         this.subject = subject;
     }
-
     @Override
     void showRole() {
         System.out.println("I am a teaching staff member. I teach " + subject + ".");
     }
 }
-
 class NonTeachingStaff extends Person {
     String role;
-
     NonTeachingStaff(String name, int id, String role) {
         super(name, id);
         this.role = role;
     }
-
     @Override
     void showRole() {
         System.out.println("I am a non-teaching staff member. My role is " + role + ".");
     }
 }
-
 public class RunTimePolymorphism {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
         List<Person> people = new ArrayList<>();//I can store the date to print
-
         System.out.print("Enter number of people to add: ");
         int n = sc.nextInt();
         sc.nextLine();

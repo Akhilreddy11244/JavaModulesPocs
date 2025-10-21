@@ -3,25 +3,19 @@ import java.util.*;
 
 class StudentInfo {
     String name, sgender, scatogory;
-    int srollno;
-
-    
+    int srollno; 
     StudentInfo(String name, String sgender, String scatogory, int srollno) {
         this.name = name;
         this.sgender = sgender;
         this.scatogory = scatogory;
         this.srollno = srollno;
     }
-
-    // Constructor Overloading (Compile-time polymorphism)
     StudentInfo(String name, String sgender, int srollno) {
         this.name = name;
         this.sgender = sgender;
         this.srollno = srollno;
         this.scatogory = "General"; 
     }
-
-
     void displayInfo() {
         System.out.println("\nStudent Info");
         System.out.println("Name: " + name);
@@ -30,7 +24,6 @@ class StudentInfo {
         System.out.println("Category: " + scatogory);
     }
 }
-
 public class CompileTimePolymorphism {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

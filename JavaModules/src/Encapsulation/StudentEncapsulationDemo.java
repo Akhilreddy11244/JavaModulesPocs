@@ -1,42 +1,43 @@
 package Encapsulation;
 import java.util.*;
+
 class Student {
     private String name;
-    private int rollNo,marks;
+    private int rollNo, marks;
     private String department;
-  
-    public String getName() {
+
+    protected String getName() {
         return name;
     }
-    public void setName(String name) {
+    protected void setName(String name) {
         this.name = name;
     }
 
-    public int getRollNo() {
+    protected int getRollNo() {
         return rollNo;
     }
-    public void setRollNo(int rollNo) {
+    protected void setRollNo(int rollNo) {
         this.rollNo = rollNo;
     }
 
-    public double getMarks() {
+    protected int getMarks() {
         return marks;
     }
-    public void setMarks(int marks) {
-      
+    protected void setMarks(int marks) {
         if (marks >= 0 && marks <= 100)
             this.marks = marks;
         else
             System.out.println("Invalid marks! Please enter between 0–100.");
     }
 
-    public String getDepartment() {
+    protected String getDepartment() {
         return department;
     }
-    public void setDepartment(String department) {
+    protected void setDepartment(String department) {
         this.department = department;
     }
-    public void displayStudentInfo() {
+
+    protected void displayStudentInfo() {
         System.out.println("\nUpdated Student Details");
         System.out.println("Name: " + name);
         System.out.println("Roll No: " + rollNo);
@@ -44,7 +45,12 @@ class Student {
         System.out.println("Marks: " + marks);
     }
 }
-
+//class Sample extends Student {
+//	public void runDisplay() {
+//        Student obj = new Student();
+//        obj.displayStudentInfo();
+//    }
+//}
 public class StudentEncapsulationDemo {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
