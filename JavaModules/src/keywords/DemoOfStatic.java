@@ -3,22 +3,22 @@ package keywords;
 import java.util.Scanner;
 
 class DetailsOfCMR{
-	static String collageName = "CMR";
+	static String collegeName = "CMR";
 	String name,branch;
-	int stdid;
+	int stdId;
 	DetailsOfCMR(String name,String branch,int stdid)
 	{
 		this.name = name;
 		this.branch = branch;
-		this.stdid = stdid;
+		this.stdId = stdid;
 	}
 	void display()
 	{
 		System.out.println("Deatils:- ");
 		System.out.println("Name: "+name);
 		System.out.println("Branch: "+branch);
-		System.out.println("Student ID: "+stdid);
-		System.out.println("Collage Name: "+collageName);
+		System.out.println("Student ID: "+stdId);
+		System.out.println("college Name: "+collegeName);
 	}
 }
 public class DemoOfStatic {
@@ -35,5 +35,4 @@ public class DemoOfStatic {
 		DetailsOfCMR newreg = new DetailsOfCMR(name,branch,stdid);
 		newreg.display();
 	}
-
 }
