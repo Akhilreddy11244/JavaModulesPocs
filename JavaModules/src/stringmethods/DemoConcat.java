@@ -2,12 +2,10 @@ package stringmethods;
 import java.util.*;
 
 public class DemoConcat {
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("ID Card Form");
-
         System.out.print("Enter First Name: ");
         String firstName = sc.nextLine();
 
@@ -45,7 +43,6 @@ public class DemoConcat {
             System.out.println("5. Department");
             int errorOption = sc.nextInt();
             sc.nextLine(); 
-
             switch (errorOption) {
                 case 1:
                     System.out.print("Enter new First Name: ");

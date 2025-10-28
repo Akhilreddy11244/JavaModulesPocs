@@ -10,7 +10,6 @@ class FailException extends Exception {
         super(message);
     }
 }
-
 class Student {
     String name;
     int rollNo;
@@ -27,7 +26,6 @@ class Student {
         }
         sc.nextLine();
     }
-
     void calculateGrades() {
         double totalPoints = 0;
         for (int i = 0; i < marks.length; i++) {
@@ -53,7 +51,6 @@ class Student {
             default: return 0;
         }
     }
-
     void validateResult() throws FailException {
         for (String g : grades) {
             if (g.equals("F")) {
@@ -61,7 +58,6 @@ class Student {
             }
         }
     }
-
     void displayCertificate() {
         System.out.println("\n-----------------------------------------");
         System.out.println("         COLLEGE SEMESTER RESULT         ");
@@ -70,17 +66,14 @@ class Student {
         System.out.println("Roll No: " + rollNo);
         System.out.println("-----------------------------------------");
         System.out.println("Subject\t\tMarks\tGrade\tPoints");
-
         for (int i = 0; i < subjects.length; i++) {
             System.out.printf("%s\t%d\t%s\t%.1f\n", subjects[i], marks[i], grades[i], getGradePoint(grades[i]));
         }
-
         System.out.println("-----------------------------------------");
         System.out.printf("SGPA: %.2f / 10.00\n", sgpa);
         System.out.println("Status: PASS");
         System.out.println("Certificate Generated Successfully!\n");
     }
-
     void displayFailedSubjects() {
         System.out.println("\n-----------------------------------------");
         System.out.println("Name: " + name + " | Roll No: " + rollNo);
@@ -103,7 +96,6 @@ public class CollegePortal {
         sc.nextLine();
 
         Student[] students = new Student[n];
-
         System.out.println("\nFACULTY INPUT SECTION:");
         for (int i = 0; i < n; i++) {
             students[i] = new Student();
@@ -115,7 +107,6 @@ public class CollegePortal {
             students[i].enterMarks(sc);
             students[i].calculateGrades();
         }
-
         System.out.println("\n--- STUDENT DOWNLOAD SECTION ---");
         for (int i = 0; i < n; i++) {
             System.out.print("\nEnter your Name: ");

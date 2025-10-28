@@ -22,12 +22,10 @@ class Server {
             }
             System.out.println("[Thread-" + Thread.currentThread().getId() + "] Request " 
                                + requestId + " (" + requestType + ") updated DB successfully.");
-
         } catch (InterruptedException e) {
             System.out.println("[Thread-" + Thread.currentThread().getId() + "] Request " 
                                + requestId + " interrupted.");
         }
-
         activeRequests--;
         completedRequests++;
 
@@ -35,15 +33,12 @@ class Server {
                            + requestId + " (" + requestType + "). Completed: " + completedRequests
                            + " | Active: " + activeRequests);
     }
-
     public int getTotalRequestsProcessed() {
         return totalRequestsProcessed;
     }
-
     public int getCompletedRequests() {
         return completedRequests;
     }
-
     public int getActiveRequests() {
         return activeRequests;
     }
@@ -111,7 +106,6 @@ public class WebServices {
             }
 
             threads[i].start();
-            Thread.sleep(200);
             System.out.println();
         }
 
