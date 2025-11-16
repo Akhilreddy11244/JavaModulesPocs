@@ -9,11 +9,9 @@ public class ContactLogPOC {
 
         System.out.println("Contact Log System");
         System.out.println("Commands: add | search | update | delete | show | exit");
-
         while (true) {
             System.out.print("\nEnter command: ");
             command = sc.nextLine().toLowerCase();
-
             switch (command) {
                 case "add":
                     System.out.print("Enter name: ");

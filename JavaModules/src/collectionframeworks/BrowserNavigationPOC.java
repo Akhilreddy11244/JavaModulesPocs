@@ -1,8 +1,6 @@
 package collectionframeworks;
 import java.util.*;
-
 public class BrowserNavigationPOC {
-
     public static void main(String[] args) {
         LinkedList<String> history = new LinkedList<>();
         ListIterator<String> iterator = history.listIterator();
@@ -24,7 +22,6 @@ public class BrowserNavigationPOC {
                     iterator.next();
                     iterator.remove();
                 }
-
                 iterator.add(url);
                 System.out.println("Visited: " + url);
             } 
@@ -51,7 +48,6 @@ public class BrowserNavigationPOC {
                 System.out.println("Invalid command!");
             }
         }
-
         sc.close();
     }
 }

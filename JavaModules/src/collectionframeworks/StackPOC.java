@@ -1,6 +1,5 @@
 package collectionframeworks;
 import java.util.*;
-
 public class StackPOC {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -12,7 +11,7 @@ public class StackPOC {
             String expression = sc.nextLine().trim();
 
             if (expression.equalsIgnoreCase("exit")) {
-                System.out.println("Exiting Calculator... 👋");
+                System.out.println("Exiting Calculator... ");
                 break;
             }
 
@@ -25,7 +24,6 @@ public class StackPOC {
         }
         sc.close();
     }
-
     private static int evaluateExpression(String exp) {
         Stack<Integer> values = new Stack<>();
         Stack<Character> operators = new Stack<>();
@@ -60,14 +58,11 @@ public class StackPOC {
                 operators.push(ch);
             }
         }
-
         while (!operators.isEmpty()) {
             values.push(applyOp(operators.pop(), values.pop(), values.pop()));
         }
-
         return values.pop();
     }
-
     private static int applyOp(char op, int b, int a) {
         switch (op) {
             case '+': return a + b;
@@ -82,11 +77,9 @@ public class StackPOC {
         }
         return 0;
     }
-
     private static boolean isOperator(char c) {
         return c == '+' || c == '-' || c == '*' || c == '/';
     }
-
     private static int precedence(char op) {
         if (op == '+' || op == '-') return 1;
         if (op == '*' || op == '/') return 2;
